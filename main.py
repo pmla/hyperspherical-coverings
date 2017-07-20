@@ -81,7 +81,7 @@ def go(target_alpha, target_group, include_weights=False, convert_to_matrix=Fals
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser(description='Print quaternion basis set')
+    parser = argparse.ArgumentParser(description='Create a quaternion set with a specified Laue group and granularity')
     parser.add_argument("lauegroup")
     parser.add_argument("alpha")
     parser.add_argument('--weights', action='store_true', help='include point weights (Voronoi cell volumes)')
