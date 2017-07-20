@@ -13,7 +13,7 @@ def read_points(path):
     if len(s) % 20 != 0:
         raise Exception("wrong filesize for a basis quaternion set")
 
-    n = len(s) / 20
+    n = len(s) // 20
     data = struct.unpack(5 * n * 'f', s)
     data = np.array(data).reshape((n, 5))
     qs = np.array(data[:,:4]).astype(np.double)
