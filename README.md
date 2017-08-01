@@ -18,16 +18,20 @@ Options:
 --print: print the output to the terminal (stdout) rather than saving it to a file.
 
 
+
 Examples:
 (alpha denotes maximum misorientation of set)
+
 
 Create file with alpha<=2 degrees for D3 Laue group
 
 python main.py D3 2
 
+
 Create file with alpha<=4 degrees for O Laue group.  Append Voronoi cell weights
 
 python main.py O 4 --weights
+
 
 Create file with alpha<=1 degrees for C2 Laue group.  Store orientations as rotation matrices.  Print data to screen rather than saving to a file.
 
