@@ -1,9 +1,6 @@
 # hyperspherical-coverings
 Orientation sets created via solution of the hyperspherical covering problem
 
-Preprint available at:
-https://arxiv.org/abs/1707.09045
-
 
 Program overview:
 
@@ -36,3 +33,17 @@ python main.py O 4 --weights
 Create file with alpha<=1 degrees for C2 Laue group.  Store orientations as rotation matrices.  Print data to screen rather than saving to a file.
 
 python main.py C2 1 --matrix --print
+
+
+
+If you use these data in a publication, please reference:
+
+Peter Mahler Larsen and Søren Schmidt
+Improved orientation sampling for indexing diffraction patterns of polycrystalline materials
+Journal of Applied Crystallography. (2017). 50, 1571-1582
+
+Article available at:
+https://doi.org/10.1107/S1600576717012882
+
+Preprint available at:
+https://arxiv.org/abs/1707.09045
