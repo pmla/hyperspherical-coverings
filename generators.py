@@ -117,3 +117,15 @@ generator_dict = { 'C1': (generator_laue_C1, generator_laue_O,  map_C1),
                    'T':  (generator_laue_T,  generator_laue_O,  map_T),
                    'O':  (generator_laue_O,  generator_laue_O,  map_O) }
 
+#HM names
+#C1: '1'
+#C2: '2'
+#C3: '3'
+#C4: '4'
+#C6: '6'
+#D2: '222'
+#D3: '32'
+#D4: '422'
+#D6: '622'
+#T:  '23'
+#O:  '432'
