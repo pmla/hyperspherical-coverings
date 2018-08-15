@@ -27,6 +27,7 @@ def read_points(path):
 
 
 def sformat(a):
+    return "%.8f" % a
     if a < 0:
         return ("%.8f" % a).rjust(13)
     else:
@@ -123,7 +124,7 @@ def run():
     print(output_format)
     print(len(data))
     for line in data:
-        print(" ".join([sformat(e) for e in line]))
+        print(" " + " ".join([sformat(e) for e in line]))
 
 if __name__ == "__main__":
     run()
