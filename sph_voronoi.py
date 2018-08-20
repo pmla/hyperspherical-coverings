@@ -1,4 +1,5 @@
 import numpy as np
+from numpy.core.umath_tests import inner1d
 
 
 def normalized(a, axis=-1, order=2):
@@ -30,5 +31,10 @@ def calculate_voronoi_vertices(qs):
          -u[:,2] * (v[:,0] * w[:,1] - v[:,1] * w[:,0])
 
     p = np.array([p0, p1, p2, p3]).T
+
+    dots = inner1d(p, qs[:,0])
+    signs = 2 * (dots > 0) - 1
+    p = p * np.expand_dims(signs, axis=-1)
+
     return normalized(p)
 
