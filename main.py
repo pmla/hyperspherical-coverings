@@ -64,13 +64,19 @@ def parse_arguments(gdict):
     parser.add_argument('--weights', action='store_true', help='include point weights (Voronoi cell volumes)')
     args = parser.parse_args()
 
-    target_group = args.lauegroup.upper()
-    if target_group not in gdict.keys():
+    target_group = args.lauegroup.lower()
+    converted = {}
+    for k in gdict.keys():
+        converted[k] = k
+        converted[k.lower()] = k
+
+    if target_group not in converted.keys() and target_group not in converted.values():
         ordered = sorted(gdict.keys())
         ordered[-1], ordered[-2] = ordered[-2], ordered[-1]
         eprint("Input error:")
         eprint("Laue group must be one of [%s]" % (", ".join(["'%s'" % e for e in ordered])))
         return None
+    target_group = converted[k]
 
     target_alpha = args.alpha
     target_alpha = int(round(float(target_alpha)))
