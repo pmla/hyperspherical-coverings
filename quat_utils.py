@@ -51,7 +51,7 @@ def map_points_out(basis_points, basis_weights, superset, subset, map_indices):
     for g in superset[map_indices]:
         for b, w in zip(basis_points, basis_weights):
             r = multiply(b, g)
-            #r = rotate_into_fundamental_zone(r, subset)
+            r = rotate_into_fundamental_zone(r, subset)
             mapped_points += [r]
             mapped_weights += [w]
 
@@ -75,6 +75,12 @@ def quaternion_to_rotation_matrix(q):
     u8 = a*a - b*b - c*c + d*d
 
     return np.array([[u0, u1, u2], [u3, u4, u5], [u6, u7, u8]])
+
+
+def rodrigues_to_quaternion(r):
+
+	s = 1 / np.sqrt(1 + np.linalg.norm(r)**2)
+	return np.array([s, s * r[0], s * r[1], s * r[2]])
 
 
 def rotation_matrix_to_quaternion(u):
