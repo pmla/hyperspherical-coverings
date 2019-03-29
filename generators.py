@@ -116,7 +116,3 @@ generator_dict = { 'C1i': (generator_laue_C1, generator_laue_O,  map_C1),
                    'D6h': (generator_laue_D6, generator_laue_D6, map_D6),
                    'Th':  (generator_laue_T,  generator_laue_O,  map_T),
                    'Oh':  (generator_laue_O,  generator_laue_O,  map_O) }
-
-#triclinic = ci = s2
-#c3i = s6
-
